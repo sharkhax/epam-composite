@@ -35,7 +35,7 @@ public class ComponentContainer implements Component { // TODO: 03.09.2020 logs
     }
 
     @Override
-    public String toString() {
+    public String toString() { // FIXME: 03.09.2020
         final StringBuilder sb = new StringBuilder();
         for (Component component : components) {
             sb.append(component.toString());
