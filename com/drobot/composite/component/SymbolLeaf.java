@@ -1,11 +1,12 @@
 package com.drobot.composite.component;
 
-public class WordLeaf implements Component { // TODO: 03.09.2020 logs
+public class SymbolLeaf implements Component {
 
-    private final char[] word;
+    private final char symbol;
+    private final ComponentType componentType = ComponentType.SYMBOL;
 
-    public WordLeaf(char[] word) {
-        this.word = word;
+    public SymbolLeaf(char symbol) {
+        this.symbol = symbol;
     }
 
     @Override
@@ -24,7 +25,12 @@ public class WordLeaf implements Component { // TODO: 03.09.2020 logs
     }
 
     @Override
+    public ComponentType getComponentType() {
+        return componentType;
+    }
+
+    @Override
     public String toString() {
-        return String.valueOf(word);
+        return String.valueOf(symbol);
     }
 }
