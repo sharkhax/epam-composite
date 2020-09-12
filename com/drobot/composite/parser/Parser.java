@@ -1,9 +1,7 @@
 package com.drobot.composite.parser;
 
-import com.drobot.composite.request.Request;
-
-import java.util.List;
+import com.drobot.composite.component.Component;
 
 public interface Parser {
-    List<String> parse(Request request);
+    Component parse(String text);
 }

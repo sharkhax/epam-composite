@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class DataReader {
 
     private static final String FILE_PATH = "data/info.txt";
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger(DataReader.class);
 
     public String readFile() throws ReaderException {
         return readFile(FILE_PATH);
@@ -28,7 +28,7 @@ public class DataReader {
             LOGGER.log(Level.INFO, "File has been read");
             return stringFile;
         } catch (IOException e) {
-            LOGGER.log(Level.ERROR, e);
+            LOGGER.log(Level.ERROR, "Error while reading file", e);
             throw new ReaderException(e);
         }
     }
